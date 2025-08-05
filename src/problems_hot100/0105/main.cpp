@@ -26,11 +26,13 @@ class Solution {
         node->left = buildNode(preorder, inorder,
                                /* begin index of left tree for preorder */ ipl + 1,
                                /* end index of left tree for preorder */ ipl + cnt_l,
-                               /* begin idx of left tree for inorder */ iil, idxRootInorder - 1);
+                               /* begin idx of left tree for inorder */ iil,
+                               /* end idx of left tree for inorder */ idxRootInorder - 1);
         node->right = buildNode(preorder, inorder,
                                 /* begin index of right tree for preorder */ ipl + 1 + cnt_l,
                                 /* end index of right tree for preorder */ ipr,
-                                /* begin idx of right tree for inorder */ idxRootInorder + 1, ipr);
+                                /* begin idx of right tree for inorder */ idxRootInorder + 1,
+                                /* end idx of right tree for inorder */ ipr);
         return node;
     }
 
